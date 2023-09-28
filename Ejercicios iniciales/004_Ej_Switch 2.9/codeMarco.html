@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dias</title>
+    </head>
+
+    <body>
+        <input id="entrada" placeholder="test" type="text" />
+        <br />
+        <button id="accion">CONVERTIR</button>
+
+        <br />
+        <hr />
+        <br />
+
+        <p id="resultado"></p>
+
+        <script>
+            var salida = document.getElementById("resultado");
+            var entrada = document.getElementById("entrada");
+            var boton = document.getElementById("accion");
+
+            function funcion() {
+                var dia = parseInt(entrada.value);
+
+                switch (dia) {
+                    case 1:
+                        salida.textContent = "Lunes";
+                        break;
+                    case 2:
+                        salida.textContent = "Martes";
+                        break;
+                    case 3:
+                        salida.textContent = "Miercoles";
+                        break;
+                    case 4:
+                        salida.textContent = "Jueves";
+                        break;
+                    case 5:
+                        salida.textContent = "Viernes";
+                        break;
+                    case 6:
+                        salida.textContent = "Sabado";
+                        break;
+                    case 7:
+                        salida.textContent = "Domingo";
+                        break;
+                    default:
+                        salida.textContent = "Error";
+                }
+            }
+
+            boton.addEventListener("click", funcion);
+
+            //document.addEventListener("DOMContentLoaded",script());
+        </script>
+    </body>
+</html>
